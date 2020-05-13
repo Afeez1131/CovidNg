@@ -190,6 +190,7 @@ footer {
     background-color: #355dc5;
     color: white;
     font-size: 1rem;
+
 }
 div.logo1 {
     background-image:url({% static 'Covid19/img/logo.png' %});
@@ -208,6 +209,7 @@ div.logo1 {
     justify-content: space-around;
     margin-right: auto;
     margin-left: auto;
+
 }
 .dev { width: 50%;
     display: flex;
@@ -220,6 +222,7 @@ div#Afeez {
     height: 4rem;
     background-size: cover;
     border-radius: 50%;
+
 }
 div#Aishat {
     background-image:url({% static 'Covid19/img/aishat.jpg' %});
@@ -232,6 +235,9 @@ div#Aishat {
 
 
 /*******************MEDIA QUERIES******************/
+
+
+
 @media only screen and (max-width : 1440px) {
     html {
         font-size:22px;
@@ -243,6 +249,8 @@ div#Aishat {
     .document {height: 15rem;padding: 0 .5rem;}
 
 }
+
+
 @media only screen and (max-width : 768px) {
     html {
         font-size:17px;
@@ -264,7 +272,7 @@ div#Aishat {
     }
     .rec {margin-left: .5rem;}
     form {width: 90%;}
-    div.image{justify-content: flex-end;height: 25rem;padding:.8rem;}
+    div.image{justify-content: flex-end;height: 25rem;}
     .profile {
         width: 100%;}
 }
@@ -293,7 +301,7 @@ div#Aishat {
             <div class="image">
                 
                 <h3 class="text-align animate__animated animate__fadeInLeft">A free API for data on the Corona Virus.<br/>
-Access data on COVID19 through an easy API for free.<br/> Build dashboards, mobile apps or integrate in to other applications.<br/> Data is sourced from <a class='red' href="https://covid19.ncdc.gov.ng/"><b>NCDC Website</b></a></h3>
+Access data on COVID19 through an easy API for free.<br/> Build dashboards, mobile apps or integrate in to other applications.<br/> Data is sourced from <br/><a class='red' href="https://covid19.ncdc.gov.ng/"><b>NCDC Website</b></a></h3>
 
 <div class="text-align .btn-color animate__animated animate__zoomin" onclick="location.href='https://documenter.getpostman.com/view/11361173/Szmh2cQm'"><input type="button" class="btn" value="GET STARTED"></div>
             </div>
@@ -331,16 +339,17 @@ Access data on COVID19 through an easy API for free.<br/> Build dashboards, mobi
         </section>
 
         <footer class="footer text-align">
-            <br/>
-            <br>
+            
             <div class="foot">DESIGNED BY:</div>
             <div class="profile">
-               <div class="dev"> <div id="Afeez"></div><h4>Lawal Afeez<br>(Backend Dev)</h4></div>
-               <div class="dev"><div id="Aishat"></div><h4>Waheed Aishat<br>(Front-end Dev)</h4></div>
+               <div class="dev"> <div id="Afeez"></div><h4>Lawal Afeez<br></h4><br/><h5>(Backend Developer)</h5></div>
+               <div class="dev"><div id="Aishat"></div><h4>Waheed Aishat<br><br></h4><br/><h5>(Frontend Developer)</h5></div>
             </div>
-            <br>
+            
 
-            <small class="">Copyright  2020</small>
+
+            <small class=""><br/>
+            <br/>Copyright  2020</small>
         </footer>
 
         <script src="" async defer>
