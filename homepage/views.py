@@ -13,3 +13,7 @@ class AllRoutes(viewsets.ModelViewSet):
 	queryset = Routes.objects.all()
 	serializer_class = AllRoutesSerializer
 	http_method_names = ['get']
+
+def error_404_view(request, exception):
+    data = {"Error": "Page not Found"}
+    return render(request,'error_404.html', data)
