@@ -10,3 +10,5 @@ class Covid(models.Model):
 	
 	def __str__(self):
 		return self.states_affected
+
+
