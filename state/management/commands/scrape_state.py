@@ -5,7 +5,7 @@ import requests
 import json
 
 
-from state.models import Covid, StateDate
+from state.models import Covid
 
 class Command(BaseCommand):
 	help = 'Refresh Database item'
@@ -31,8 +31,8 @@ class Command(BaseCommand):
 			admitted = tab[count + 2]
 			discharged = tab[count + 3]
 			death = tab[count + 4]
-				
-			count += 5
+
+
 			Covid.objects.create(
 			states_affected = states_affected,
 			lab_confirmed = lab_confirmed,
@@ -40,16 +40,8 @@ class Command(BaseCommand):
 			discharged = discharged,
 			death = death)
 
-			StateDate.objects.create(
-			states_affected = states_affected,
-			lab_confirmed = lab_confirmed,
-			admitted = admitted,
-			discharged = discharged,
-			death = death)
+			count += 5
 
-
-		print(Covid)
-		print(StateDate)
 		self.stdout.write('Latest Data Fetched')
 
 		

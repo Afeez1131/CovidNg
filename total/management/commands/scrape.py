@@ -5,7 +5,7 @@ import requests
 import json
 
 
-from total.models import Total, TotalDate
+from total.models import Total
 
 class Command(BaseCommand):
 	help = 'Refresh Database item'
@@ -39,16 +39,14 @@ class Command(BaseCommand):
 			death = death)
 			#saving the days data in a model
 			
-			TotalDate.objects.create(
-				sample=sample,
-				confirmed=confirmed,
-				active=active,
-				discharged=discharged,
-				death=death)
+			# TotalDate.objects.create(
+			# 	sample=sample,
+			# 	confirmed=confirmed,
+			# 	active=active,
+			# 	discharged=discharged,
+			# 	death=death)
 
 		except Exception as e:
 			print(e)
-		print(Total.objects.all())
-		print(TotalDate.objects.all())
 
 		self.stdout.write('latest data fetched')
