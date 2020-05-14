@@ -10,11 +10,9 @@ router.register('discharged', views.DischargedApi)
 router.register('death', views.DeathApi)
 router.register('sample', views.SampleApi)
 router.register('', views.TotalApi)
+#router.register('date', views.TotalDateApi)
 
 
 urlpatterns = [
 	path('total/', include(router.urls)),
-	path('total/latest', views.total_latest),
-	path('total/delete',views.total_delete, name='delete_total'),
-	path('login', views.LoginPage, name='login'),
 ]

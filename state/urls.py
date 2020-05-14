@@ -11,6 +11,4 @@ router.register('state', views.StateListView)
 
 urlpatterns = [
 	path('', include(router.urls)),
-	path('delete', views.delete, name='delete'),
-	path('latest', views.latest, name='latest')
 ]

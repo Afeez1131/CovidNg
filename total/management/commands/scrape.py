@@ -5,7 +5,7 @@ import requests
 import json
 
 
-from total.models import Total
+from total.models import Total, TotalDate
 
 class Command(BaseCommand):
 	help = 'Refresh Database item'
@@ -27,17 +27,28 @@ class Command(BaseCommand):
 		discharged = active_cases[3].text
 		death = active_cases[4].text 
 
+		#deleting the data from the previous day
+		Total.objects.all().delete()
 		try:
-			Total.objects.all().delete()
+			
 			Total.objects.create(
 			sample = sample,
 			confirmed = confirmed,
 			active = active,
 			discharged = discharged,
 			death = death)
+			#saving the days data in a model
+			
+			TotalDate.objects.create(
+				sample=sample,
+				confirmed=confirmed,
+				active=active,
+				discharged=discharged,
+				death=death)
 
-			print(Total)
 		except Exception as e:
 			print(e)
+		print(Total.objects.all())
+		print(TotalDate.objects.all())
 
 		self.stdout.write('latest data fetched')

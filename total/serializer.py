@@ -32,3 +32,9 @@ class TotalSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Total 
 		fields = ('sample', 'confirmed', 'active', 'discharged', 'death')
+
+# class TotalDateSerializer(serializers.ModelSerializer):
+# 	class Meta:
+# 		model = TotalDate
+# 		fields = ('sample', 'confirmed', 'active', 'discharged', 'death',)
+# 		extra_kwargs = {'url': {'lookup_field': 'date'}}
